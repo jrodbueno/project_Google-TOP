@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body html{
+                display: block; 
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                min-width: 400px;
+                background-color: #fff;
+                font-size: 14px;
+                font-family: arial,sans-serif;
+                color: #222;
+            }
+            .container{
+                display:flex;
+                flex-direction: column;
+                height: 100%;
+            }
+            .top{
+                display: flex;
+                align-items: center;
+                padding: 6px;
+                height: 60px;;
+                flex-shrink: 0;
+                box-sizing: border-box;
+            }
+            .head{
+                display: inline-block;
+                flex-grow: 1;
+                min-width: auto;
+                height: 48px;
+                color: blue;
+            }
+            .h-items{
+                padding-left: 0;
+                float: right;
+                box-sizing: border-box;
+                height: 48px;
+                line-height: normal;
+                padding: 0 4px;
+                display: flex;
+                align-items: center;
+                flex: 0 0 auto;
+                vertical-align: middle;
+                white-space: nowrap;   
+                font-family: arial,sans-serif;
+                line-height: normal;
+                padding-right: 15px; 
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+            .h-item a{
+                display: inline-block;
+                padding-left: 15px;
+                color: rgba(0,0,0,0.87);
+                text-decoration: none;
+            }
+            .mid{
+                display: flex;
+                flex-direction: column ;
+                align-items: center;
+                height: 100%;
+                margin-top: auto;
+                min-height: 92px;
+                max-height: 290px;
+                height: calc(100%-560px);
+                flex-shrink: 0;
+                box-sizing: border-box;
+            }
+            .title{
+                max-height: 92px;
+                height: 100%;
+                position: relative;
+                margin-top: auto;
+            }
+            .logo{
+                max-height: 100%;
+                max-width: 100%;
+                object-fit: contain;
+                object-position: center bottom;
+                width: auto;
+                height: 92px;
+            }
+            .input-box{
+                flex-shrink: 0;
+                box-sizing: border-box;
+                max-height: 160px;
+                padding: 20px;
+            }
+            form{
+                display: block;
+                margin-top: 0em;
+            }
+            .input{
+                background-color: transparent;
+                border: none;
+                margin: 0;
+                padding: 0;
+                color: rgba(0,0,0,.87);
+                word-wrap: break-word;
+                outline: none;
+                display: flex;
+                flex: 100%;
+                margin-top: -37px;
+                height: 34px;
+                font-size: 16px;
+            }
+            .s-form-container{
+                flex: 1;
+                display: flex;
+                padding: 5px 8px 0 16px;
+                padding-left: 14px;
+            }
+            .form-container{
+                background: #fff;
+                display: flex;
+                border: 1px solid #dfe1e5;
+                box-shadow: none;
+                border-radius: 1500px;
+                z-index: 3;
+                height: 44px;
+                margin: 0 auto;
+                width: auto;
+                max-width: 584px;
+            }
+            .form-search-btn{
+                display: flex;
+                align-items: center;
+                padding-right: 13px;
+                margin-top: -5px;
+                
+            }
+            .s-form-search{
+                margin-top: 3px;
+                color: #9aa0a6;
+                height: 20px;
+                width: 20px;
+                line-height: 24px;
+                position: relative;
+                display: inline-block;
+                fill: currentColor;
+            }
+            .search-span{
+                margin: auto
+            }
+            .search-button{
+                display: block;
+                height: 100%;
+                width: 100%;
+            }
+            .div1{
+                display: flex;
+                flex: 1;
+                flex-wrap: wrap;
+            }
+            .u-div{
+                color: transparent;
+                flex: 100%;
+                white-space: pre;
+                height: 34px;
+            }
+            .bottom{
+                grid-area: footer;
+            }
+            center{
+                display: block;
+                text-align: -webkit-center;
+            }
+            .button{
+                background-color: #f8f9fa;
+                border: 1px solid #f8f9fa;
+                border-radius: 4px;
+                color: #3c4043;
+                font-family: arial,sans-serif;
+                font-size: 14px;
+                margin: 11px 4px;
+                padding: 0 16px;
+                line-height: 27px;
+                height: 36px;
+                min-width: 54px;
+                text-align: center;
+                cursor: pointer;
+            }
+            .button:hover{
+                border-style: solid;
+                border: 10px;
+                border-color: black;
+            }
+        </style>
+        <title>Google Clone</title>
+    </head>
+    <body>
+        <div class="container" id="grid">
+            <div class="top">
+                <div class="head">
+                    <div class="h-items">
+                        <div class ="h-item" id="Gmail"><a class="gb_f" data-pid="23" href="https://mail.google.com/mail/&amp;ogbl" target="_top">Gmail</a></div>
+                        <div class ="h-item" id="Images"><a class="gb_f" data-pid="2" href="https://www.google.com.mx/imghp?hl=en&amp;ogbl" target="_top">Images</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mid">
+            <div class="title">
+               <img class="logo" id= 'google' alt="Google's logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"></img>
+            </div>
+        </div>
+        <div class="input-box">
+            <form action="/search" method="GET" role="search">
+                <div class="form-container">
+                    <div class="s-form-container">
+                        <div class="form-search-btn">
+                            <div class="s-form-search">
+                                <span class="search-span">
+                                    <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="div1">
+                                <div class="u-div">
+                                </div>
+                            <input class ="input">
+                            </input>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <center>
+                        <input class = "button" type="submit" value = "Google Search" aria-label="Google Search"></input>
+                        <input class = "button" type="submit" value= "I'm feeling lucky" aria-label="I'm feeling lucky"></input>
+                    </center>
+                </div>
+            </form>
+        </div> 
+        <div class="bottom"></div>
+        <div id= "footer" class="footer"></div>
+            </div>
+    </body>
+</html>
